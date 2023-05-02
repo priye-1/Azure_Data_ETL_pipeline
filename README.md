@@ -21,7 +21,7 @@ It involves use of the following azure services:
 
 ### Dataset Used
 You can use any dataset, we are mainly interested in operation side of Data Engineering (building data pipeline)
-However, dataset can be found here - <github dataset link>
+However, dataset can be found <a href='https://github.com/priye-1/Azure_Data_ETL_pipeline/tree/master/datasets'>here</a>
 
 
 ## Getting started 
@@ -47,16 +47,16 @@ However, dataset can be found here - <github dataset link>
 3. <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal#create-a-storage-account-1">Create Azure Storage account </a>to hold datasets. Make sure to use the resource group created above for this, and every other services to be created.<br>
     a. Navigate to <b>Containers</b> on the side bar of the newly created storage account<br>
     b. Click the <b>+</b> sign to create a container(folder). In this case we will be creating two containers - <b>landing</b>  and <b>archive</b><br>
-    c. Click on the <b>landing</b> folder and upload files to the cotainer using the <b>upload</b> button<br><br>
-    d. our storage account should look like the image below <img src="readme_images/storage_account.png">
+    c. Click on the <b>landing</b> folder and upload files to the cotainer using the <b>upload</b> button<br>
+    d. our storage account should look like the image below<br> <img src="readme_images/storage_account.png">
 
 4. <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal#create-a-single-database">Spin up Azure SQL and create Database</a>.<br>
     a. Make sure to use the same recourse group in all services<br>
     b. Also create a new server and store the password and username details<br>
     c. Make sure to click <b>yes</b> under Allow Azure Service and resources to access this server<br>
     d. After deploying Azure SQL, Open resource, Navigate to sidebar and click on <b>connection string</b><br>
-    e. Click on <b>JDBC</b> and copy the displayed string. Paste somewhere as this will be used later <br><br>
-    f. Confirm creation of database by clicking the query tool <br><img src="readme_images/query_tool.png">
+    e. Click on <b>JDBC</b> and copy the displayed string. Paste somewhere as this will be used later <br>
+    f. Confirm creation of database by clicking the query tool <br><br><img src="readme_images/query_tool.png">
     
 
 
@@ -76,6 +76,6 @@ To visualize data on databricks, upload the `creating_dashboards.sql` file to yo
 8. Creating Data Pipeline with Azure Data Factory
 In this stage, <a href="https://learn.microsoft.com/en-us/azure/data-factory/tutorial-copy-data-portal#create-a-data-factory">A Data Factory resource was created. </a> This service helps to create data pipelines which can then be published and monitored.
 a. next is to create the data pipeline. There will be three tasks that will be created and these tasks will run from our databricks notebooks.<br>
-b. Drag and drop the notebook from the Databricks menu, and make sure to add the notebook path under <b>settings</b><br>
+b. Drag and drop the notebook from the Databricks menu, and make sure to add the notebook path under <b>settings</b>
 our pipeline should look like the this:<br> <img src="readme_images/azure_df.png"><br>
 c. From here you can either <a href="https://learn.microsoft.com/en-us/azure/data-factory/tutorial-copy-data-portal#trigger-the-pipeline-manually">trigger the pipeline manually</a> or <a href="https://learn.microsoft.com/en-us/azure/data-factory/tutorial-copy-data-portal#trigger-the-pipeline-on-a-schedule"> trigger the pipeline on a schedule</a>
